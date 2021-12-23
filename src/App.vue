@@ -5,7 +5,6 @@
          <button class="card__btn" @click="makeReq" > Актуальный курс валют</button>
        </div>
        <ul v-if="resp" class="list">
-
          <li v-for="(item, id) in resp.Valute" :key="id" class="list-elem">
            <Card
                :name="item.Name"
@@ -15,35 +14,23 @@
            >
            </Card>
          </li>
-
        </ul>
      </div>
-
    </div>
-
-
-
 </template>
 
 <script>
 import Card from "./components/Card";
 
-
-
 export default {
-
   name: 'App',
   components: {
     "Card" : Card,
   },
 
   data() {
-
     return {
       resp: '',
-
-
-
     }
   },
   methods: {
@@ -51,12 +38,8 @@ export default {
       fetch("https://www.cbr-xml-daily.ru/daily_json.js")
           .then((response) => response.json()).then(json => this.resp = json);
       console.log(this.resp.Valute)
-
-
-
     }
   }
-
 }
 </script>
 
@@ -64,38 +47,17 @@ export default {
 #app {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0 auto;
-  /*-moz-osx-font-smoothing: grayscale;*/
   display: flex;
   justify-content: center;
   width: 76rem;
-  /*color: #2c3e50;*/
-  /*margin-top: 4rem;*/
-  /*width: 76rem;*/
-
-  /*max-height: 400rem;*/
-
-
 }
-
 
 .card{
   display: flex;
   flex-direction: column;
   width: 76rem;
-
-
-
   max-height: 400rem;
-  /*!*max-width: 75rem;*!*/
-  /*margin: 0 auto;*/
-  /*position: absolute;*/
-  /*top: calc(50% - 400px);*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*border-radius: 30px;*/
   background-color: #fcfbfb;
-  /*!*padding: 30px;*!*/
-  /*color: white;*/
   border-radius: 1rem;
   box-shadow: 0 0 2px rgba(0,0,0,0.5);
 
@@ -106,17 +68,16 @@ export default {
   border-radius: 1rem;
   border: none;
   max-height: 5rem;
-
   font-weight: bold;
   font-size: 3rem;
   width: 76rem;
-  background: rgba(105, 182, 220, 0.86);
+  background: rgba(101, 155, 124, 0.86);
   color: white;
   cursor: pointer;
 }
 
 .card__btn:active{
-  background: rgba(105, 193, 220, 0.86);
+  background: rgba(33, 59, 44, 0.86);
 }
 
 .list{
@@ -126,8 +87,5 @@ export default {
   list-style-type: none;
   margin-bottom: 1rem;
 }
-
-
-
 
 </style>
