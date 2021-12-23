@@ -1,12 +1,11 @@
 <template>
    <div id="app">
-
-
      <div class="card">
        <div class="card__request">
          <button class="card__btn" @click="makeReq" > Актуальный курс валют</button>
        </div>
        <ul v-if="resp" class="list">
+
          <li v-for="(item, id) in resp.Valute" :key="id" class="list-elem">
            <Card
                :name="item.Name"
@@ -15,21 +14,9 @@
                :prev-rate="item.Previous"
            >
            </Card>
-
-
-
-
-
-           <!--         {{item.Name}}-->
-           <!--         {{item.CharCode}}-->
-           <!--         {{item.Value}}-->
-           <!--         {{item.Previous}}-->
-
          </li>
 
        </ul>
-
-
      </div>
 
    </div>
@@ -76,11 +63,17 @@ export default {
 <style>
 #app {
   font-family: Helvetica, Arial, sans-serif;
-
+  margin: 0 auto;
   /*-moz-osx-font-smoothing: grayscale;*/
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 76rem;
   /*color: #2c3e50;*/
-  margin-top: 4rem;
+  /*margin-top: 4rem;*/
+  /*width: 76rem;*/
+
+  /*max-height: 400rem;*/
+
 
 }
 
@@ -88,9 +81,9 @@ export default {
 .card{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-  width: 75rem;
+  width: 76rem;
+
+
 
   max-height: 400rem;
   /*!*max-width: 75rem;*!*/
@@ -100,9 +93,11 @@ export default {
   /*left: 0;*/
   /*right: 0;*/
   /*border-radius: 30px;*/
-  background-color: #f3eeec;
+  background-color: #fcfbfb;
   /*!*padding: 30px;*!*/
   /*color: white;*/
+  border-radius: 1rem;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
 
 }
 
@@ -114,18 +109,24 @@ export default {
 
   font-weight: bold;
   font-size: 3rem;
-  width: 75rem;
-  background: rgba(23, 20, 20, 0.86);
+  width: 76rem;
+  background: rgba(105, 182, 220, 0.86);
   color: white;
   cursor: pointer;
 }
 
+.card__btn:active{
+  background: rgba(105, 193, 220, 0.86);
+}
 
-
+.list{
+  padding: 0.4rem;
+}
 .list-elem{
   list-style-type: none;
   margin-bottom: 1rem;
 }
+
 
 
 

@@ -2,12 +2,12 @@
   <div class="card-block">
     <div class="card__info" >
       <span class="card__block-name">{{name}}</span>
-      <span class="card__block-name">{{rate}}</span>
+      <span class="card__block-name">{{rate}} ₽</span>
 
     </div>
     <div class="card__values">
       <span class="card__block-code">{{code}}</span>
-      <span class="card__block-rate">{{prevRate}}</span>
+      <span class="card__block-rate">{{prevRate}} ₽</span>
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
   width: 73rem;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
   margin-bottom: 1rem;
 
 
