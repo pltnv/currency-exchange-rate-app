@@ -37,7 +37,7 @@ export default {
     makeReq() {
       fetch("https://www.cbr-xml-daily.ru/daily_json.js")
           .then((response) => response.json()).then(json => this.resp = json);
-      console.log(this.resp.Valute)
+      // console.log(this.resp.Valute)
     }
   }
 }

@@ -1,4 +1,6 @@
-# exchange
+# Exchange rate app
+
+Getting json from an open source [CBR](cbr-xml-daily.ru) data 
 
 ## Project setup
 ```
